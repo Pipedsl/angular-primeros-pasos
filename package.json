@@ -5,8 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:href": "ng build --base-href ./",
     "build:gh": "ng build --delete-output-path --output-path docs --base-href ./",
+    "copy:dist": "copyfiles dist/browser/* ./docs -f",
+    "clean:dist": "rd /s /q dist",
+    "deploy:gh": "npm run build:gh && npm run copy:dist && npm run clean:dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
