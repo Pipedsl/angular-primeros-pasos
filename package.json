@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "build:gh": "ng build --delete-output-path --output-path docs --base-href ./",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
